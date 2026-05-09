@@ -1,0 +1,32 @@
+<div class="section">
+    <div class="section-name">Experience</div>
+    {%- for exp in experience %}
+    <div class="section-content">
+        <div class="section-date">{{ exp.date }}</div>
+        <div class="section-description">
+            <div class="section-subject">{{ exp.position }}  <span class="section-subsubject"> at {{exp.company}} </span> </div>
+            {%- for section in exp.sections | default([]) %}
+            <div class="section-place">{{ section.section_title }}</div>
+            <div class="section-bullets">
+                <ul>
+                    {% for bullet in section.experience %}
+                    <li>{{ bullet }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {%- endfor %}
+            {# Legacy format support #}
+            {%- if exp.responsibilities is defined %}
+            <div class="section-bullets">
+                <ul>
+            {%- for resp in exp.responsibilities | default([]) %}
+                    <li>{{ resp }}</li>
+            {%- endfor %}
+
+                </ul>
+            </div>
+            {%- endif %}
+        </div>
+    </div>
+    {%- endfor %}
+</div>

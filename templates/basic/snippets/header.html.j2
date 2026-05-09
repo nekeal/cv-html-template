@@ -1,0 +1,34 @@
+<div class="bio-heading">
+    <div class="heading">
+        <div style="display: inline-block;">
+            <h1>{{ name }}</h1>
+            <h3>{{ title }}</h3>
+            <h4 class="subtitle">{{ subtitle }}</h4>
+        </div>
+        <div style="display: inline-block; margin-left:200px">
+            <div class="box">
+                <img class='ico' src="{{root_dir}}/static/img/phone.png" alt="">&nbsp;&nbsp;{{ phone }}
+            </div>
+            <div class="box">
+                <img class='ico' src="{{root_dir}}/static/img/email.png" alt="">{{ email }}
+            </div>
+            <div class="box">
+                <img class='ico' src="{{root_dir}}/static/img/github.png" alt=""><a href="https://{{ github_link }}">{{
+                    github_link }}</a>
+            </div>
+            <div class="box">
+                <img class='ico' src="{{root_dir}}/static/img/linkedin.png" alt=""><a
+                    href="https://{{ linkedin_link }}">{{ linkedin_link }}</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bio-data">
+</div>
+<div class="section">
+    <div class="section-content">
+        <div class="section-date"></div>
+        <p class="summary">{{ summary }}</p>
+    </div>
+</div>
